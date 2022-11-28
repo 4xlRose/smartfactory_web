@@ -6,7 +6,8 @@ module.exports = {
       "primary": "#B72530",
       "primary-border": "#be505a",
       "primary-text": "#FFFFFF",
-      "gray": "#BBBBBB"
+      "gray": "#BBBBBB",
+      "button-highlight": "#BBBBBB22"
     },
   },
   plugins: []
