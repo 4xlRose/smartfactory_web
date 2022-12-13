@@ -28,7 +28,7 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
-COPY --from=installer --chown=nextjs:nodejs /app/apps ./
+COPY --from=installer --chown=nextjs:nodejs /app ./
 
 WORKDIR /app/apps/security_camera_web
 CMD ["npm", "run", "dev"]
