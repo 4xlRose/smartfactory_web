@@ -28,8 +28,8 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 USER nextjs
 
-COPY --from=installer /app/apps/web/next.config.js .
-COPY --from=installer /app/apps/web/package.json .
+COPY --from=installer /app/apps/security_camera_web/next.config.js .
+COPY --from=installer /app/apps/security_camera_web/package.json .
 
 COPY --from=installer --chown=nextjs:nodejs /app/apps/security_camera_web/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/security_camera_web/.next/static ./apps/security_camera_web/.next/static
