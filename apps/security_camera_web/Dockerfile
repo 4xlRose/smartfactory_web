@@ -3,7 +3,7 @@ RUN apk add --no-cache libc6-compat
 RUN apk update
 
 WORKDIR /app
-RUN yarn global add turbo
+RUN npm i -g turbo
 COPY . .
 RUN turbo prune --scope=security_camera_web --docker
 
@@ -15,11 +15,11 @@ WORKDIR /app
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/yarn.lock ./yarn.lock
-RUN yarn install
+RUN npm i
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-RUN yarn turbo run build --filter=security_camera_web
+RUN turbo run build --filter=security_camera_web
 
 FROM node:alpine AS runner
 WORKDIR /app
