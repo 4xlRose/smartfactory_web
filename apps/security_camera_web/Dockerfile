@@ -19,7 +19,7 @@ RUN npm i
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-RUN turbo run build --filter=security_camera_web
+RUN npx turbo run build --filter=security_camera_web
 
 FROM node:alpine AS runner
 WORKDIR /app
