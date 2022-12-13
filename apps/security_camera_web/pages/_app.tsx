@@ -10,8 +10,8 @@ import { setHostname, setPort, enableHTTPS } from "security_camera_api/config";
 
 const queryClient = new QueryClient();
 
-setHostname("localhost");
-setPort(3000);
+setHostname("camera_server");
+setPort(3001);
 enableHTTPS(false);
 
 export default function App({ Component, pageProps }: AppProps) {
