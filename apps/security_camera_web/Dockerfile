@@ -14,7 +14,7 @@ WORKDIR /app
 
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/yarn.lock ./yarn.lock
+COPY --from=builder /app/out/package-lock.json ./package-lock.json
 RUN npm i
 
 COPY --from=builder /app/out/full/ .
