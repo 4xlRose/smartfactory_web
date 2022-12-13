@@ -10,7 +10,7 @@ import { setHostname, setPort, enableHTTPS } from "security_camera_api/config";
 
 const queryClient = new QueryClient();
 
-setHostname("camera_server");
+setHostname("10.22.244.185");
 setPort(3001);
 enableHTTPS(false);
 
