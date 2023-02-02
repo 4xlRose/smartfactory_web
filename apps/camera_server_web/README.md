@@ -1,30 +1,33 @@
-## Getting Started
+# Camera server web interface
 
-First, run the development server:
+This application is the main entrypoint for Smart Factory's camera system.
+
+## Running the server
+
+First, from the root of the turborepo execute the followign command to only run this development server:
 
 ```bash
-yarn dev
+turbo run dev --filter=camera_server_web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alternatively, you can build and start a production ready instance with the following commands:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+turbo run build ---filter=camera_server_web
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+turbo run start --filter=camera_server_web
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Configure the server
 
-## Learn More
+The server's configuration can be changed via the `config.toml` file located in your system's
+default config folder, under `camera_server_web/`. On Linux systems the file is generally located in
+`~/.config/camera_server_web/config.toml`
 
-To learn more about Next.js, take a look at the following resources:
+## Building the docker image
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The server can be run from a docker image via the included Dockerfile. From the root of the turborepo, execute the following
+command to build the image (don't forget to change the tag):
+```bash
+docker build apps/camera_server_web/Dockerfile -t camera_server_web:{TAG}
+```
