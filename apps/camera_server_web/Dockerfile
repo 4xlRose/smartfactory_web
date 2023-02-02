@@ -23,6 +23,7 @@ COPY turbo.json turbo.json
 RUN npx turbo run build --filter=security_camera_web
 
 FROM node:alpine AS runner
+LABEL org.opencontainers.image.source=https://github.com/Smartfactory-Tec/smartfactory_web
 ENV CAMERA_SERVER_WEB_CONFIG_PATH=/config
 WORKDIR /app
 
