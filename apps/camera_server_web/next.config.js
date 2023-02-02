@@ -33,6 +33,7 @@ const config = toml.parse(rawToml)
 
 module.exports = {
   reactStrictMode: true,
+  output: 'standalone',
   experimental: {
     outputFileTracingRoot: path.join(__dirname, "../../"),
     transpilePackages: ["ui"]
