@@ -20,7 +20,7 @@ RUN npm i
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-RUN npx turbo run build --filter=security_camera_web
+RUN npx turbo run build --filter=camera_server_web
 
 FROM node:alpine AS runner
 LABEL org.opencontainers.image.source=https://github.com/Smartfactory-Tec/smartfactory_web
