@@ -1,5 +1,5 @@
 {
-  "name": "security_camera_web",
+  "name": "camera_server_web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "camera_server_api": "*",
     "next": "13.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.2",
-    "ui": "*",
-    "security_camera_api": "*"
+    "toml": "^3.0.0",
+    "ui": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

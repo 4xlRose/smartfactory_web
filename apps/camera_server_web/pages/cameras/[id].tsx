@@ -1,7 +1,7 @@
 import { Button, Logo } from "ui";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { getStream, getStreams, getVideoStream } from "security_camera_api/stream";
+import { getStream, getStreams, getVideoStream } from "camera_server_api/stream";
 import { useQuery } from "react-query";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";

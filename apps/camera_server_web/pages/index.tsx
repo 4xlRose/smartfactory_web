@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getStreams } from "security_camera_api/stream";
+import { getStreams } from "camera_server_api/stream";
 import { Logo } from "ui";
 import Image from "next/image";
 import { useRouter } from "next/router";

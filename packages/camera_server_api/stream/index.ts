@@ -1,4 +1,4 @@
-import { config } from "../config";
+import {SERVER_WS_URL, SERVER_URL} from "../config";
 import axios from "axios";
 
 interface Stream {
@@ -7,7 +7,8 @@ interface Stream {
 }
 
 export async function getStreams(): Promise<Stream[]> {
-  let res = await axios.get(`${config.url}/streams`);
+  console.log(SERVER_URL);
+  let res = await axios.get(`${SERVER_URL}/streams`);
   return res.data;
 }
 
@@ -38,12 +39,12 @@ function getSocket(url: string) {
 }
 
 export async function getStream(id: string): Promise<Stream> {
-  let res = await axios.get(`${config.url}/streams/${id}`);
+  let res = await axios.get(`${SERVER_URL}/streams/${id}`);
   return res.data;
 }
 
 export async function getVideoStream(id: string): Promise<[MediaStream, () => void]> {
-  const socket = await getSocket(`${config.wsUrl}/streams/${id}/video`);
+  const socket = await getSocket(`${SERVER_WS_URL}/streams/${id}/video`);
 
   const peer = new RTCPeerConnection({
     iceServers: [
