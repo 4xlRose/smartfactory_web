@@ -5,9 +5,10 @@ RUN apk update
 WORKDIR /app
 RUN npm i -g turbo
 COPY . .
-RUN turbo prune --scope=security_camera_web --docker
+RUN turbo prune --scope=camera_server_web --docker
 
 FROM node:alpine AS installer
+
 RUN apk add --no-cache libc6-compat
 RUN apk update
 WORKDIR /app
@@ -22,13 +23,13 @@ COPY turbo.json turbo.json
 RUN npx turbo run build --filter=security_camera_web
 
 FROM node:alpine AS runner
+ENV CAMERA_SERVER_WEB_CONFIG_PATH=/config
 WORKDIR /app
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-USER nextjs
+RUN npm i -g next
+RUN npm i toml
 
-COPY --from=installer --chown=nextjs:nodejs /app ./
+COPY --from=installer /app/apps/camera_server_web/ ./
 
-WORKDIR /app/apps/security_camera_web
-CMD ["npm", "run", "dev"]
+
+ENTRYPOINT ["npm", "start"]

@@ -4,8 +4,8 @@ const path = require("path");
 
 let CONFIG_PATH;
 
-if (process.env.CAMERA_SERVER_WEB_CONFIG_FOLDER !== undefined) {
-  CONFIG_PATH = process.env.CAMERA_SERVER_WEB_CONFIG_FOLDER;
+if (process.env.CAMERA_SERVER_WEB_CONFIG_PATH !== undefined) {
+  CONFIG_PATH = process.env.CAMERA_SERVER_WEB_CONFIG_PATH;
 } else if (process.env.XDG_CONFIG_HOME !== undefined) {
   CONFIG_PATH = process.env.XDG_CONFIG_HOME;
   CONFIG_PATH = path.join(CONFIG_PATH, "camera_server_web");
@@ -34,6 +34,7 @@ const config = toml.parse(rawToml)
 module.exports = {
   reactStrictMode: true,
   experimental: {
+    outputFileTracingRoot: path.join(__dirname, "../../"),
     transpilePackages: ["ui"]
   },
   env: {

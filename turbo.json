@@ -7,7 +7,7 @@
     },
     "camera_server_web#build": {
       "dependsOn": ["^build"],
-      "env": ["CAMERA_SERVER_WEB_CONFIG_FOLDER", "XDG_CONFIG_HOME", "HOME"],
+      "env": ["CAMERA_SERVER_WEB_CONFIG_PATH", "XDG_CONFIG_HOME", "HOME"],
       "outputs": [".next/**"]
     },
     "lint": {
