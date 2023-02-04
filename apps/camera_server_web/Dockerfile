@@ -7,7 +7,7 @@ RUN npm i -g turbo
 COPY . .
 RUN turbo prune --scope=camera_server_web --docker
 
-FROM node:alpine AS installer
+FROM node:alpine AS runner
 
 RUN apk add --no-cache libc6-compat
 RUN apk update
@@ -22,15 +22,6 @@ COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
 RUN npx turbo run build --filter=camera_server_web
 
-FROM node:alpine AS runner
-LABEL org.opencontainers.image.source=https://github.com/Smartfactory-Tec/smartfactory_web
 ENV CAMERA_SERVER_WEB_CONFIG_PATH=/config
-WORKDIR /app
 
-RUN npm i -g next
-RUN npm i toml
-
-COPY --from=installer /app/apps/camera_server_web/ ./
-
-
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["npm", "start", "--prefix", "./apps/camera_server_web"]
