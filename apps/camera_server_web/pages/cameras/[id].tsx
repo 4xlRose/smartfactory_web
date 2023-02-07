@@ -1,22 +1,24 @@
 import { Button, Logo } from "ui";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { getStream, getStreams, getVideoStream } from "camera_server_api/stream";
 import { useQuery } from "react-query";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useCameraClientServer, Stream } from "camera_server_api";
 
 export default function Handler() {
-  const streamsQuery = useQuery("streams", getStreams);
+  const cameraClient = useCameraClientServer();
+  const streamsQuery = useQuery("streams", () => cameraClient.getStreams());
 
   const router = useRouter();
   const { id } = router.query;
 
-  console.log(id);
-
-  const streamQuery = useQuery(["stream", id], () => getStream(id as string), {
+  const streamQuery = useQuery(["stream", id], () => cameraClient.getStream(id as string), {
     enabled: !!id
   });
+
+  const streams = streamsQuery.data;
+  const stream = streamQuery.data;
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -25,7 +27,7 @@ export default function Handler() {
   useEffect(() => {
     if (!id) return;
     (async () => {
-      const [stream, disconnect] = await getVideoStream(id as string);
+      const [stream, disconnect] = await cameraClient.connectToStream(id as string);
       if (videoRef.current && stream) {
         console.log("updating stream 1");
         videoRef.current.srcObject = stream;
@@ -50,7 +52,7 @@ export default function Handler() {
         </div>
         {
           streamsQuery.isSuccess ?
-            streamsQuery.data.map((camera) => {
+            streams?.map((camera) => {
               return (
                 <Link href={`/cameras/${camera.id}`} className="hover:bg-button-highlight transition-all">
                   <div className="flex p-4 gap-4 items-center border-t-2 border-primary-border">
@@ -73,7 +75,7 @@ export default function Handler() {
         {
           streamQuery.isSuccess ?
             <h1 className="text-4xl">
-              {streamQuery.data.name}
+              {stream?.name}
             </h1> : null
         }
 

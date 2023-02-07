@@ -1,1 +1,3 @@
-export { default as stream } from "stream";
+export type { Stream } from "./stream";
+export { CameraServerClientProvider, useCameraClientServer } from "./CameraServerClientProvider";
+export { default as CameraServerClient } from "./CameraServerClient";
