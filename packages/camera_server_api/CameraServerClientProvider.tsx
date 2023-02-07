@@ -1,4 +1,4 @@
-import CameraServerClient from "./CameraServerClient";
+import {CameraServerClient} from "./CameraServerClient";
 import React, {ReactNode, useContext } from "react";
 
 declare global {

@@ -10,7 +10,7 @@ import type { AppContext, AppInitialProps, AppProps } from "next/app";
 import App from "next/app";
 import getConfig from "next/config";
 import { CameraServerClientProvider } from "camera_server_api/CameraServerClientProvider";
-import CameraServerClient from "camera_server_api/CameraServerClient";
+import { CameraServerClient } from "camera_server_api";
 
 const { publicRuntimeConfig } = getConfig();
 

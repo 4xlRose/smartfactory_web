@@ -1,7 +1,7 @@
 {
   "name": "camera_server_api",
   "version": "0.1.0",
-  "main": "CameraServerClient.ts",
+  "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
   "scripts": {

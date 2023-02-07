@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { useCameraClientServer } from "camera_server_api/CameraServerClientProvider";
+import { useCameraClientServer } from "camera_server_api";
 import { Logo } from "ui";
 import Image from "next/image";
 import { useRouter } from "next/router";

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useCameraClientServer, Stream } from "camera_server_api";
+import { useCameraClientServer } from "camera_server_api";
 
 export default function Handler() {
   const cameraClient = useCameraClientServer();

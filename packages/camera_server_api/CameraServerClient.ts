@@ -23,7 +23,7 @@ interface CameraServerClientConfig {
 
 }
 
-export default class CameraServerClient {
+export class CameraServerClient {
   serverUrl: string;
   serverWsUrl: string;
 
