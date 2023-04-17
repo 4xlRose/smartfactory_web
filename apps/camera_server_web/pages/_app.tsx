@@ -18,7 +18,10 @@ const queryClient = new QueryClient();
 const cameraServerClient = new CameraServerClient({
   host: publicRuntimeConfig.cameraServerHost,
   port: publicRuntimeConfig.cameraServerPort,
-  useHTTPS: publicRuntimeConfig.cameraServerUseHttps
+  useHTTPS: publicRuntimeConfig.cameraServerUseHttps,
+  serviceHost: publicRuntimeConfig.cameraServiceHost,
+  servicePort: publicRuntimeConfig.cameraServicePort,
+  serviceUseHTTPS: publicRuntimeConfig.cameraServiceUseHTTPS,
 });
 
 

@@ -71,7 +71,7 @@ export default function Handler() {
       </div>
       <div className="flex flex-col w-full max-w-4xl mx-auto my-8 gap-4">
 
-        <video className="w-full aspect-[16/9] rounded" ref={videoRef}></video>
+        <video className="w-full aspect-[16/9] rounded" ref={videoRef} autoPlay></video>
         {
           streamQuery.isSuccess ?
             <h1 className="text-4xl">

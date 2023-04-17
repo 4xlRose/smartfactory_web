@@ -46,6 +46,9 @@ module.exports = {
   publicRuntimeConfig: {
     cameraServerHost: config.camera_server_host,
     cameraServerPort: config.camera_server_port,
-    cameraServerUseHttps: config.camera_server_use_https
+    cameraServerUseHttps: config.camera_server_use_https,
+    cameraServiceHost: config.camera_service_host,
+    cameraServicePort: config.camera_service_port,
+    cameraServiceUseHttps: config.camera_service_use_https,
   }
 };

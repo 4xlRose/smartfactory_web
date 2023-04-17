@@ -21,31 +21,39 @@ interface CameraServerClientConfig {
 
   useHTTPS?: boolean,
 
+  serviceHost: string,
+  servicePort: number,
+  serviceUseHTTPS?: boolean
+
 }
 
 export class CameraServerClient {
   serverUrl: string;
   serverWsUrl: string;
+  serviceUrl: string;
 
 
   constructor(config: CameraServerClientConfig) {
     const useHTTPS = config.useHTTPS === undefined ? false : config.useHTTPS;
     this.serverUrl = `http${useHTTPS ? "s" : ""}://${config.host}:${config.port}`;
     this.serverWsUrl = `ws${useHTTPS ? "s" : ""}://${config.host}:${config.port}`;
+
+    const serviceUseHTTPS = config.serviceUseHTTPS === undefined ? false : config.serviceUseHTTPS;
+    this.serviceUrl = `http${serviceUseHTTPS ? "s" : ""}://${config.serviceHost}:${config.servicePort}`;
   }
 
   async getStreams(): Promise<Stream[]> {
-    let res = await axios.get(`${this.serverUrl}/streams`);
+    let res = await axios.get(`${this.serviceUrl}/cameras`);
     return res.data;
   }
 
   async getStream(id: string): Promise<Stream> {
-    let res = await axios.get(`${this.serverUrl}/streams/${id}`);
+    let res = await axios.get(`${this.serviceUrl}/cameras/${id}`);
     return res.data;
   }
 
   async connectToStream(id: string): Promise<[MediaStream, () => void]> {
-    const socket = await connectToSocket(`${this.serverWsUrl}/streams/${id}/video`);
+    const socket = await connectToSocket(`${this.serverWsUrl}/${id}`);
 
     const peer = new RTCPeerConnection({
       iceServers: [
