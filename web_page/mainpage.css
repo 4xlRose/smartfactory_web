@@ -1,0 +1,528 @@
+body{
+    position: relative;
+    width: 1280px;
+    height: 832px;
+
+    background: #000235;
+}
+
+.mp{
+    /* Página Principal */
+
+position: relative;
+width: 1280px;
+height: 832px;
+
+background: #000235;
+
+
+/* Ellipse 2 */
+
+position: absolute;
+width: 1516px;
+height: 500px;
+left: -168px;
+top: -307px;
+
+background: rgba(199, 71, 63, 0.9);
+filter: blur(200px);
+
+
+/* Ellipse 2 */
+
+position: absolute;
+width: 1516px;
+height: 500px;
+left: -118px;
+top: 743px;
+
+background: rgba(199, 71, 63, 0.7);
+filter: blur(250px);
+
+
+/* Logo Smart */
+
+position: absolute;
+width: 295px;
+height: 126px;
+left: 0px;
+top: 0px;
+
+
+
+/* Smart  Factory */
+
+position: absolute;
+width: 178.17px;
+height: 107.13px;
+left: 116.83px;
+top: 18.87px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 35px;
+line-height: 44px;
+letter-spacing: 0.33em;
+text-transform: uppercase;
+
+color: #FFF5F5;
+
+
+
+/* Logo */
+
+position: absolute;
+width: 92.82px;
+height: 126px;
+left: 0px;
+top: 0px;
+
+
+
+/* image 2 */
+
+position: absolute;
+width: 43.74px;
+height: 95.57px;
+left: 0px;
+top: 0px;
+
+background: url(image.png);
+
+
+/* image 3 */
+
+position: absolute;
+width: 43.74px;
+height: 95.57px;
+left: 92.82px;
+top: 126px;
+
+background: url(image.png);
+transform: rotate(180deg);
+
+
+/* Ver Cámaras */
+
+position: absolute;
+width: 291px;
+height: 76px;
+left: 989px;
+top: 756px;
+
+
+
+/* Ver cámaras */
+
+position: absolute;
+width: 291px;
+height: 76px;
+left: 989px;
+top: 756px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+border: 1px solid #000000;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* image 5 */
+
+position: absolute;
+width: 39px;
+height: 40px;
+left: 1228px;
+top: 774px;
+
+background: url(.png);
+
+
+/* Group 1 */
+
+position: absolute;
+width: 199px;
+height: 67px;
+left: 147px;
+top: 248px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 184.49px;
+height: 67px;
+left: 154.26px;
+top: 248px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Cámaras online */
+
+position: absolute;
+width: 199px;
+height: 45px;
+left: 147px;
+top: 263px;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Component 5 */
+
+position: absolute;
+width: 768px;
+height: 119px;
+left: 367px;
+top: 222px;
+
+border-radius: 50px;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* IMAGEN 1 */
+
+position: absolute;
+left: 37.47%;
+right: 37.4%;
+top: 34.98%;
+bottom: 34.77%;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 36px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 203px;
+height: 67px;
+left: 147px;
+top: 374px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 188.2px;
+height: 67px;
+left: 154.4px;
+top: 374px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Número de detecciones */
+
+position: absolute;
+width: 203px;
+height: 45px;
+left: 147px;
+top: 389px;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 203px;
+height: 67px;
+left: 147px;
+top: 500px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 188.2px;
+height: 67px;
+left: 154.4px;
+top: 500px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Demora aproximada */
+
+position: absolute;
+width: 203px;
+height: 45px;
+left: 147px;
+top: 515px;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Component 6 */
+
+position: absolute;
+width: 768px;
+height: 119px;
+left: 367px;
+top: 357px;
+
+border-radius: 50px;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* IMAGEN 1 */
+
+position: absolute;
+left: 37.47%;
+right: 37.4%;
+top: 34.98%;
+bottom: 34.77%;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 36px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Component 7 */
+
+position: absolute;
+width: 768px;
+height: 119px;
+left: 367px;
+top: 492px;
+
+border-radius: 50px;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* IMAGEN 1 */
+
+position: absolute;
+left: 37.47%;
+right: 37.4%;
+top: 34.98%;
+bottom: 34.77%;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 36px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Group 4 */
+
+position: absolute;
+width: 203px;
+height: 67px;
+left: 146px;
+top: 635px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 188.2px;
+height: 67px;
+left: 153.4px;
+top: 635px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* DATO X */
+
+position: absolute;
+width: 203px;
+height: 45px;
+left: 146px;
+top: 650px;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Component 8 */
+
+position: absolute;
+width: 768px;
+height: 119px;
+left: 366px;
+top: 627px;
+
+border-radius: 50px;
+
+
+/* Rectangle 1 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* IMAGEN 1 */
+
+position: absolute;
+left: 37.47%;
+right: 37.4%;
+top: 34.98%;
+bottom: 34.77%;
+
+font-family: 'Scope One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 36px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+/* Estado de cámaras */
+
+position: absolute;
+width: 1309px;
+height: 44px;
+left: calc(50% - 1309px/2 - 14.5px);
+top: 154px;
+
+font-family: 'Sana';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 35px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+}

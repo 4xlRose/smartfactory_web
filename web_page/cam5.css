@@ -1,0 +1,241 @@
+body{
+    position: relative;
+    width: 1280px;
+    height: 832px;
+
+    background: #000235;
+}
+
+.c5{
+    /* Ellipse 2 */
+
+
+position: absolute;
+width: 1516px;
+height: 500px;
+left: -168px;
+top: -307px;
+
+background: rgba(199, 71, 63, 0.9);
+filter: blur(200px);
+
+
+/* Ellipse 2 */
+
+
+position: absolute;
+width: 1516px;
+height: 500px;
+left: -118px;
+top: 743px;
+
+background: rgba(199, 71, 63, 0.7);
+filter: blur(250px);
+
+
+/* Frame 6 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 167px;
+height: 56px;
+left: 74px;
+top: 700px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Frame 5 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 168px;
+height: 56px;
+left: 74px;
+top: 619px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Frame 4 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 169px;
+height: 56px;
+left: 74px;
+top: 530px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Frame 3 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 168px;
+height: 56px;
+left: 74px;
+top: 449px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Frame 2 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 167px;
+height: 56px;
+left: 74px;
+top: 368px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Frame 1 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+gap: 20px;
+
+position: absolute;
+width: 164px;
+height: 56px;
+left: 77px;
+top: 287px;
+
+background: #FFF5F5;
+border-radius: 50px;
+
+
+/* Component 5 */
+
+
+position: absolute;
+width: 667px;
+height: 303px;
+left: 456px;
+top: 350px;
+
+
+
+/* Slide indicator */
+
+
+position: absolute;
+width: 370px;
+height: 35px;
+left: 590px;
+top: 664px;
+
+
+
+/* Logo Smart */
+
+
+position: absolute;
+width: 295px;
+height: 126px;
+left: 0px;
+top: 0px;
+
+
+
+/* Más Información > */
+
+
+position: absolute;
+width: 291px;
+height: 76px;
+left: 989px;
+top: 756px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+border: 1px solid #000000;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/* CÁMARAS EN VIVO */
+
+
+position: absolute;
+width: 1284px;
+height: 44px;
+left: calc(50% - 1284px/2 + 2px);
+top: 126px;
+
+font-family: 'Sana';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 35px;
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
